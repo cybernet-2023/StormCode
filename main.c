@@ -1,12 +1,6 @@
-#include <stdio.h>
-
-int main(int argc, char* argv[])
+void kmain(void)
 {
-	if(argc < 2)
-	{
-		printf("Usage: %s <flags> <command>\n", argv[0]);
-		return 0;
-	}
-
-	return 0;
+	char* vidmem = (char*) 0xb8000;
+	vidmem[0] = 'W';
+	vidmem[1] = 0x02;
 }
